@@ -3,14 +3,14 @@
 <html>
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title>Backpack The Planet - <%= @title || "Powered by TwitterAuth" %></title>
+    <title>TwitrDoo - <%= @title || "A Simple To-Do List" %></title>
     <%= stylesheet_link_tag 'master' %>
     <%= javascript_include_tag :defaults %>
   </head>
   <body>
     <div id='wrapper'>
       <div id='header'>
-        <h1><%= link_to 'Backpack The Planet', '/' %></h1>
+        <h1><%= link_to image_tag("twitrdoo.png", :border=>0), '/' %></h1>
          
         <div id='user_bar'>
           <% if logged_in? %>
@@ -31,7 +31,23 @@
       </div>
     </div>
     <div id='footer'>
-      Copyright &copy; 2009 Backpack The Planet. Powered by <%= link_to 'TwitterAuth', 'http://mbleigh.com/twitter-auth', :target => '_blank' %>.
+      Copyright &copy; 2009 TwitrDoo. Created by <%= link_to "SproutingSeed", "http://twitter.com/sproutingseed" %>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="6531899">
+		<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+		</form>
+	
     </div>
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-9600936-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
   </body>
 </html>

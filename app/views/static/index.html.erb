@@ -1,12 +1,16 @@
-<h2>Welcome to Your Twitter Application!</h2>
+<h2>Welcome to TwitrDoo!</h2>
 
-<p>You have successfully created a Twitter-ready application! To test it out just click on <strong>Login via Twitter</strong> above. You should be taken to Twitter and then back here where it will tell you that you are logged in!</p>
+<p>TwitrDoo is a simple web-based 'To-Do' list! It's super easy to use... just click on <strong>Login via Twitter</strong> above and log in with your Twitter account. Create your list, then hit complete when you finished your task. It's that simple.</p>
 
-<p>This template doesn't assume anything about how you want to build your application other than that you want to use Twitter authentication to do it, so you can generate any controllers, models, and anything else you like! You can tie it back to Twitter accounts simply by adding associations etc. to <code>app/models/user.rb</code>.</p>
+<p>So, <%= link_to "Get Started", "http://twitrdoo.com/todos" %> already!</p>
 
 <% if @users.any? %>
   <h2>Recently Joined</h2>
   <% for user in @users %>
     <%= link_to profile_image(user), twitter_profile_url(user), :target => "_blank" %>
+
+
   <% end %>
-<% end %>
+
+<% end%>
+

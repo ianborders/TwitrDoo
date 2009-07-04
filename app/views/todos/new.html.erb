@@ -1,0 +1,15 @@
+<h1>Create A New To-Do Item!</h1>
+
+<% form_for(@todo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit 'Create To-Do Item' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back To Your List', todos_path %>

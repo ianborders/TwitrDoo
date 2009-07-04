@@ -1,0 +1,21 @@
+<h1>Your TwitrDoo To-Do List</h1>
+
+<table>
+  <tr>
+    <th>To-Do Item</th>
+  </tr>
+
+<% @todos.each do |todo| %>
+  <tr>
+    <td><%=h todo.title %></td>
+
+    <td><div id='buttonedit'><%= link_to 'Edit', edit_todo_path(todo) %></div></td>
+    <td><div id='buttoncomplete'><%= link_to 'Complete', todo, :confirm => 'Are You Sure Your Done?', :method => :delete %></div></td>
+
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create A New To-Do Item', new_todo_path %>

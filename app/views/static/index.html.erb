@@ -1,9 +1,19 @@
 <h2>Welcome to TwitrDoo!</h2>
+<table>
+    <tr>
+	<td class='floatlefthome'>
+		TwitrDoo is a simple web-based 'To-Do list'. It's super easy to use... <%= link_to 'Login via Twitter', '/login' %> or just follow @TwitrDoo to automatically create your account.
+			
+		<p>So.... <%= link_to "Get Started", "/todos" %> already!</p>
+		
+		<div id='block'><p>You can manage your 'To-Do List' here, or direct message your tasks to @TwitrDoo on Twitter, from your IM application, or even your mobile phone!</p></div>
 
-<p>TwitrDoo is a simple web-based 'To-Do' list! It's super easy to use... just click on <strong>Login via Twitter</strong> above and log in with your Twitter account. Create your list, then hit complete when you finished your task. It's that simple.</p>
-
-<p>So, <%= link_to "Get Started", "http://twitrdoo.com/todos" %> already!</p>
-
+		</td>
+    <td class='floatrighthome'>
+		<img src="/images/homeimg.jpg" width="400" />
+		</td>
+		</tr>
+</table>
 <% if @users.any? %>
   <h2>Recently Joined</h2>
   <% for user in @users %>

@@ -1,21 +1,14 @@
-<h1>Your TwitrDoo To-Do List</h1>
-
+<div id='floatright'><a href="http://www.highriseHQ.com/?referrer=IANWINSCOM"><img alt="Highrise" border="0" height="125" src="https://affiliate.37signals.com/images/products/highrise/banner-270x125.png" width="270" /></a></div>
+<h2>Your TwitrDoo To-Do List</h2>
 <table>
-  <tr>
-    <th>To-Do Item</th>
-  </tr>
 
 <% @todos.each do |todo| %>
   <tr>
-    <td><%=h todo.title %></td>
-
-    <td><div id='buttonedit'><%= link_to 'Edit', edit_todo_path(todo) %></div></td>
-    <td><div id='buttoncomplete'><%= link_to 'Complete', todo, :confirm => 'Are You Sure Your Done?', :method => :delete %></div></td>
+    <td class='floatleftlist'><%=h todo.title %><br><div id='buttonedit'><%= link_to 'Edit', edit_todo_path(todo) %></div><div id='buttoncomplete'><%= link_to 'Complete', todo, :confirm => 'Are You Sure Your Done?', :method => :delete %></div></td>
 
   </tr>
 <% end %>
 </table>
-
 <br />
 
 <%= link_to 'Create A New To-Do Item', new_todo_path %>

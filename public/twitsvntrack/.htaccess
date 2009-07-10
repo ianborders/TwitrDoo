@@ -1,0 +1,23 @@
+<Files *.cgi>
+	SetHandler fastcgi-script
+</Files>
+
+DirectoryIndex index.fcgi
+
+
+# Make sure rewrites work
+Options ExecCGI FollowSymLinks
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-d
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} !-f
+	RewriteCond $1 !^index.fcgi/(.*)
+	# Keep the graphics and style sheet the way they are
+	RewriteCond $1 !^(.*).css$
+	RewriteCond $1 !^(.*).gif$
+	RewriteCond $1 !^(.*).jpg$
+	RewriteCond $1 !^(.*).png$
+	RewriteRule ^(.*)$ index.fcgi/$1 [L]
+</IfModule>
+
